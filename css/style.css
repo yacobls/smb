@@ -12937,6 +12937,8 @@ textarea.form-control {
   }
 }
 
+/* Dropdown */
+
 /* Style the dropdown button */
 .dropdown .nav-link {
   position: relative;
@@ -12947,7 +12949,7 @@ textarea.form-control {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 10%;
@@ -12973,4 +12975,20 @@ textarea.form-control {
   display: block;
 }
 
+/* Scrolling List */
 
+#scrolling-list {
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px; /* atur ketinggian maksimum */
+  overflow-y: auto; /* tambahkan penggulungan vertikal jika diperlukan */
+}
+
+#scrolling-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* tambahkan garis pemisah */
+}
+
+#scrolling-list li:last-child {
+  border-bottom: none; /* hapus garis pemisah dari elemen terakhir */
+}
