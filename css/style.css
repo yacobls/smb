@@ -76,6 +76,10 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 [tabindex="-1"]:focus {
@@ -522,6 +526,12 @@ mark,
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+  transition: box-shadow 0.3s ease; /* Animasi bayangan */
+}
+
+.img-thumbnail:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1); /* Bayangan saat hover */
 }
 
 .figure {
@@ -9473,18 +9483,18 @@ button.bg-dark:focus {
   .p-md-4 {
     padding: 1.5rem !important;
   }
-  .pt-md-4,
+  /* .pt-md-4,
   .py-md-4 {
     padding-top: 1.5rem !important;
-  }
+  } */
   .pr-md-4,
   .px-md-4 {
     padding-right: 1.5rem !important;
   }
-  .pb-md-4,
+  /* .pb-md-4,
   .py-md-4 {
     padding-bottom: 1.5rem !important;
-  }
+  } */
   .pl-md-4,
   .px-md-4 {
     padding-left: 1.5rem !important;
@@ -11715,6 +11725,27 @@ h5,
   }
 }
 
+.ftco-about-1 {
+  position: relative;
+  z-index: 0;
+  padding: 6em 0;
+}
+.ftco-about-1:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background: #01d28e;
+  z-index: -2;
+  width: 63%;
+}
+@media (max-width: 767.98px) {
+  .ftco-about-1:after {
+    width: 100%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .img-2 {
     height: 600px;
@@ -11734,13 +11765,13 @@ h5,
   font-weight: 600;
 }
 
+/* EDIT */
 .services .icon {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.05);
   margin: 0 auto;
-  margin-bottom: 20px;
 }
 .services .icon span {
   font-size: 40px;
@@ -11912,6 +11943,7 @@ textarea.form-control {
   padding: 6em 0;
   position: relative;
 }
+
 @media (max-width: 767.98px) {
   .ftco-section {
     padding: 6em 0;
@@ -12949,7 +12981,7 @@ textarea.form-control {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 150px;
+  min-width: 190px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 10%;
@@ -12959,6 +12991,7 @@ textarea.form-control {
 .dropdown-content a {
   color: black;
   padding: 5px;
+  margin: 5px;
   text-decoration: none;
   display: block;
   font-size: small;
@@ -12991,4 +13024,165 @@ textarea.form-control {
 
 #scrolling-list li:last-child {
   border-bottom: none; /* hapus garis pemisah dari elemen terakhir */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.image-box {
+    width: 100%;
+    padding-bottom: 100%; /* Kotak */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000; /* warna border hitam dengan ketebalan 2px */
+    border-radius: 10px; /* melengkungkan border */
+}
+
+.image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+  padding: 20px;
+}
+
+.features {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.check {
+  position: relative;
+  padding-left: 25px;
+}
+
+.check:before {
+  content: '\2713'; /* Unicode untuk tanda check */
+  position: absolute;
+  left: 0;
+}
+
+.zoom {
+    transition: transform 0.3s ease; /* animasi perubahan ukuran gambar */
+}
+
+.image-box:hover .zoom {
+    transform: scale(1.3); /* ubah faktor skala sesuai kebutuhan untuk memperbesar gambar */
+}
+
+.slider-container {
+  position: relative;
+}
+.slider-container .slider {
+  width: 100%;
+}
+.thumbnail-container {
+  position: absolute;
+  top: 0;
+  left: -200px; /* Adjust this value as needed */
+  width: 120px; /* Adjust this value as needed */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+.thumbnail-container img {
+  width: 100px; /* Adjust this value as needed */
+  height: auto;
+  margin-bottom: 10px; /* Adjust this value as needed */
+  cursor: pointer;
+}
+
+.services-1 {
+  background-color: rgba(255, 255, 255, 0.90); /* Warna latar belakang */
+  padding: 20px; /* Padding konten */
+  border-radius: 10px; /* Bentuk sudut */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+  transition: box-shadow 0.3s ease; /* Animasi bayangan */
+}
+
+.services-1:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1); /* Bayangan saat hover */
+}
+
+.text {
+  padding-top: 20px; /* Jarak atas konten dari latar belakang */
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 10px;
+  }
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end; /* Menyusun elemen ke kanan */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+
+.icon {
+  display: flex;
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+
+.icon img {
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.icon-container-1 {
+  display: flex;
+  justify-content: flex-start; /* Menyusun elemen ke kanan */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+
+}
+
+.icon-1 {
+  display: flex;
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+
+.icon-1 img {
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.image-container {
+  width: 50px; /* Lebar tetap */
+  height: 50px; /* Tinggi tetap */
+  position: relative; /* Untuk penempatan absolut elemen dalam kontainer */
+  border: 1px solid black; /* Border */
+  border-radius: 50%; /* Border radius untuk membuatnya bulat */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang berada di luar border */
+  display: flex; /* Menggunakan flexbox untuk menengahkan gambar */
+  justify-content: center; /* Menengahkan secara horizontal */
+  align-items: center; /* Menengahkan secara vertikal */
+}
+
+.image-background {
+    width: 100%; /* Lebar 100% dari parent */
+    height: 100%; /* Tinggi 100% dari parent */
+    background-color: #01d28e; /* Warna latar belakang */
+}
+
+.image {
+  max-width: 90%; /* Mengatur lebar maksimum agar gambar tidak melewati batas parent */
+  max-height: 90%; /* Mengatur tinggi maksimum agar gambar tidak melewati batas parent */
+  display: block; /* Menghilangkan space ekstra di bawah gambar */
+  margin: auto; /* Menengahkan gambar di dalam parent */
+  transform: translate(10%, 5%); /* Menyesuaikan posisi gambar relatif terhadap parent */
+  position: absolute;
 }
