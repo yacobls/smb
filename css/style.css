@@ -13000,7 +13000,8 @@ textarea.form-control {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #01d28e80;
+  border-radius: 100px;
 }
 
 /* Show the dropdown menu on hover */

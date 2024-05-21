@@ -345,3 +345,4 @@ document.addEventListener('contextmenu', function(event) {
 	  return false;
 	}
   }
+  
