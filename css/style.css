@@ -11830,6 +11830,43 @@ h5,
   opacity: 0.3;
 }
 
+.ftco-intro2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+  z-index: 0;
+}
+@media (min-width: 768px) {
+  .ftco-intro2 .overlay {
+    position: absolute;
+    top: -130px;
+    left: 600px;
+    right: 0;
+    bottom: -120px;
+    width: 40%;
+    content: "";
+    opacity: 1;
+    background: #01d28e;
+    -ms-transform: rotate(20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(20deg);
+    /* Safari 3-8 */
+    transform: rotate(50deg);
+  }
+}
+.ftco-intro2:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: #ffffff;
+  z-index: -2;
+  opacity: 0.3;
+}
+
 .ftco-section-parallax {
   position: relative;
 }
@@ -12448,11 +12485,12 @@ textarea.form-control {
 .block-23 ul {
   padding: 0;
 }
+/* EDIT */
 .block-23 ul li,
 .block-23 ul li > a {
   display: table;
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
 }
 .block-23 ul li span {
   color: rgba(255, 255, 255, 0.7);
@@ -13106,13 +13144,25 @@ textarea.form-control {
 
 .services-1 {
   background-color: rgba(255, 255, 255, 0.90); /* Warna latar belakang */
-  padding: 20px; /* Padding konten */
+  padding: 10px; /* Padding konten */
   border-radius: 10px; /* Bentuk sudut */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan */
   transition: box-shadow 0.3s ease; /* Animasi bayangan */
 }
 
 .services-1:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1); /* Bayangan saat hover */
+}
+
+.services-3 {
+  background-color: rgba(255, 255, 255, 0.90); /* Warna latar belakang */
+  padding: 10px; /* Padding konten */
+  border-radius: 10px; /* Bentuk sudut */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+  transition: box-shadow 0.3s ease; /* Animasi bayangan */
+}
+
+.services-3:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 1); /* Bayangan saat hover */
 }
 
@@ -13176,7 +13226,7 @@ textarea.form-control {
 .image-background {
     width: 100%; /* Lebar 100% dari parent */
     height: 100%; /* Tinggi 100% dari parent */
-    background-color: #01d28e; /* Warna latar belakang */
+    background-color: #ffffff; /* Warna latar belakang */
 }
 
 .image {
@@ -13186,4 +13236,137 @@ textarea.form-control {
   margin: auto; /* Menengahkan gambar di dalam parent */
   transform: translate(10%, 5%); /* Menyesuaikan posisi gambar relatif terhadap parent */
   position: absolute;
+  padding-bottom: 5px;
+}
+
+.services-3 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Warna teks */
+  padding: 20px; /* Padding dalam elemen */
+  border-radius: 10px; /* Radius border */
+  overflow: hidden; /* Menyembunyikan elemen yang keluar dari batas */
+}
+
+.services-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Overlay hitam dengan transparansi 50% */
+  z-index: 1; /* Pastikan overlay berada di atas gambar latar */
+}
+
+.services-3 .icon,
+.services-3 .text {
+  position: relative;
+  z-index: 2; /* Pastikan konten berada di atas overlay */
+}
+
+.services-4 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Warna teks */
+  padding: 20px; /* Padding dalam elemen */
+  border-radius: 10px; /* Radius border */
+  overflow: hidden; /* Menyembunyikan elemen yang keluar dari batas */
+}
+
+.services-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay hitam dengan transparansi 50% */
+  z-index: 1; /* Pastikan overlay berada di atas gambar latar */
+}
+
+.services-4 .icon,
+.services-4 .text {
+  position: relative;
+  z-index: 2; /* Pastikan konten berada di atas overlay */
+}
+
+.icon img {
+  max-width: 100%; /* Membuat gambar responsif */
+  height: auto;
+}
+
+.text {
+  background-color: transparent; /* Latar belakang putih dengan sedikit transparansi untuk teks */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wa-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 60px;
+}
+
+.wa-button img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.wa-button:hover {
+  background-color: #128c7e;
+}
+
+.responsive-map {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Rasio aspek 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.button-container-1 {
+  text-align: center;
+}
+
+.btn-1 {
+  display: inline-block;
+  width: 100%; /* Mengatur lebar tombol menjadi 100% */
+  max-width: 350px; /* Mengatur lebar maksimum tombol */
+  padding: 10px; /* Mengatur padding tombol */
+  text-align: center;
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Mengatur sudut tombol */
+  transition: background-color 0.3s ease; /* Transisi saat hover */
+}
+
+.btn-1:hover {
+  background-color: #0056b3; /* Warna latar belakang tombol saat hover */
 }
