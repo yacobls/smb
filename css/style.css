@@ -11746,9 +11746,28 @@ h5,
   }
 }
 
+.ftco-about-3 {
+  position: relative;
+  z-index: 0;
+}
+.ftco-about-3:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: #01d28e;
+  z-index: -2;
+  width: 70%;
+}
+@media (max-width: 767.98px) {
+  .ftco-about-3:after {
+    width: 100%;
+  }
+}
+
 @media (max-width: 767.98px) {
   .img-2 {
-    height: 600px;
     margin-bottom: 40px;
   }
 }
@@ -13356,7 +13375,7 @@ textarea.form-control {
 .btn-1 {
   display: inline-block;
   width: 100%; /* Mengatur lebar tombol menjadi 100% */
-  max-width: 350px; /* Mengatur lebar maksimum tombol */
+  max-width: 250px; /* Mengatur lebar maksimum tombol */
   padding: 10px; /* Mengatur padding tombol */
   text-align: center;
   background-color: #007bff; /* Warna latar belakang tombol */
@@ -13369,4 +13388,28 @@ textarea.form-control {
 
 .btn-1:hover {
   background-color: #0056b3; /* Warna latar belakang tombol saat hover */
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  border: #01d28e solid 1px;
+  border-radius: 2%;
+}
+
+@media (max-width: 768px) {
+  .img-container {
+      padding: 0 15px; /* Padding untuk mode mobile */
+  }
+
+  .img-container img {
+      width: 100%; /* Membuat gambar menyesuaikan lebar kontainer */
+      max-width: none; /* Menonaktifkan batasan lebar maksimum */
+  }
 }
